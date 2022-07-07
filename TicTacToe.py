@@ -1,7 +1,7 @@
 import pygame
 
 
-#display pygame window
+#display pygame windows
 pygame.init()
 window = pygame.display.set_mode((600,600))
 
@@ -28,6 +28,7 @@ int_button = [pygame.Rect(0, 0, 200, 200),pygame.Rect(200, 0, 200, 200),pygame.R
 bg = pygame.image.load('back.png')
 x = pygame.image.load('x.png')
 o = pygame.image.load('o.png')
+nowin = pygame.image.load('nowinner.png')
 
 
 winner = {}
@@ -71,7 +72,7 @@ def check_winner(table , step):
 
 
 	elif step == 9:
-		print('There Is No Winner !!')
+		window.blit(nowin, (0,225))
 
 	return True
 
